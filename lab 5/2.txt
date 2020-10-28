@@ -1,0 +1,8 @@
+ran_x_values = rnorm(100, mean=0, sd=1)
+ran_x_values
+boxplot(ran_x_values)
+ran_y_values = rnorm(100, mean = 2, sd = 1)
+ran_y_values
+# draw the scatter plot
+my_frame = data.frame(ran_x_values, ran_y_values)
+ggplot() + geom_point(data = my_frame, aes(x=ran_x_values, y=ran_y_values), color="blue", size=3)
