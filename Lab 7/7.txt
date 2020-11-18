@@ -1,0 +1,24 @@
+.libPaths()
+.libPaths(.libPaths()[2])
+install.packages('visualize')
+library(visualize)
+library(BSDA)
+m1<-c(363,404,518,521,613,587,412,469,468,496)
+m2<-c(536,474,556,549,479,422,414,505,505,552)
+m=mean(m1)
+m
+n=mean(m2)
+n
+var(m1)
+sd(m1)
+var(m2)
+sd(m2)
+
+t.test(x=m1,y=m2,var.equal = TRUE,conf.level = 0.95)
+
+qt(p=0.05/2,df=18,lower.tail=FALSE)
+qt(p=0.05/2,df=18,lower.tail=TRUE)
+
+visualize.t(stat = c(-2.100922,2.100922), df=18, section="tails")
+visualize.t(stat = c(-0.47061),df=18,section="lower")
+visualize.t(stat = c(-0.47061),df=18,section="upper")
